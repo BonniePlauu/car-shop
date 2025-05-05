@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробности автомобиля | Carjet</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header__logo">
+                <img src="images/logo.svg" alt="Carjet" class="logo">
+                <h1>Carjet Auto</h1>
+            </a>
+            <span class="header__slogan">Найдите авто своей мечты!</span>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#about">О нас</a></li>
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+        </div>
+    </header>
+
+    <div class="back-button-container">
+        <button class="back-button" onclick="history.back()"><</button>
+    </div>
+
+    <main class="main car-details-page">
+        <section class="car-details">
+            <div class="container">
+                <div id="carDetails"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/car-details.js"></script>
+</body>
+</html>

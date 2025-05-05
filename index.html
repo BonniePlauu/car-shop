@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carjet - Продажа автомобилей в Беларуси</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header__logo">
+                <img src="images/logo.svg" alt="Carjet" class="logo">
+                <h1>Carjet Auto</h1>
+            </a>
+            <span class="header__slogan">Найдите авто своей мечты!</span>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#about">О нас</a></li>
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero" id="home">
+            <div class="container">
+                <h2>Найдите свой идеальный автомобиль с Carjet</h2>
+                <p>Лучшие предложения на рынке Беларуси</p>
+            </div>
+        </section>
+
+        <section class="search-filter">
+            <div class="container">
+                <form id="filterForm" class="filter-form" action="catalog.html" method="get">
+                    <div class="filter-row">
+                        <div class="form-group">
+                            <label for="brand">Марка:</label>
+                            <select id="brand" name="brand">
+                                <option value="">Все марки</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Модель:</label>
+                            <select id="model" name="model" disabled>
+                                <option value="">Сначала выберите марку</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div class="form-group">
+                            <label for="minPrice">Цена от, $:</label>
+                            <input type="number" id="minPrice" name="minPrice" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="maxPrice">Цена до, $:</label>
+                            <input type="number" id="maxPrice" name="maxPrice" placeholder="100000" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="minYear">Год от:</label>
+                            <input type="number" id="minYear" name="minYear" placeholder="2000" min="1990" max="2025">
+                        </div>
+                        <div class="form-group">
+                            <label for="maxYear">Год до:</label>
+                            <input type="number" id="maxYear" name="maxYear" placeholder="2025" min="1990" max="2025">
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <button type="submit" class="btn">Найти автомобиль</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="featured-cars">
+            <div class="container">
+                <h2>Интересные предложения</h2>
+                <div class="cars-grid" id="featuredCars"></div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2>О нас</h2>
+                <p>🚗 Carjet Auto – ваш надежный автомобильный маркетплейс в Беларуси!</p>
+
+                <p> Мы – команда профессионалов, которая знает всё о покупке и продаже автомобилей в РБ. Carjet Auto – это современный онлайн-магазин, где вы найдете лучшие предложения на новые и подержанные авто от проверенных продавцов со всей Беларуси.</p>
+                    
+                <p> Почему выбирают нас?</p>
+                <p>  ✔ Большой выбор авто – У нас представлены тысячи автомобилей: от бюджетных моделей до премиальных новинок.</p>
+                <p>  ✔ Только проверенные продавцы – Мы сотрудничаем с официальными дилерами и частными продавцами с хорошей репутацией.</p>
+                <p> ✔ Прозрачность сделки – Полная информация о состоянии машины, истории обслуживания и честная цена.</p>
+                <p> ✔ Финансовая и юридическая безопасность – Помогаем с оформлением документов, кредитом и страховкой.</p>
+                <p> Carjet Auto – покупайте и продавайте автомобили в Беларуси быстро, выгодно и безопасно!</p>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

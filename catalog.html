@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог автомобилей | Carjet</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header__logo">
+                <img src="images/logo.svg" alt="Carjet" class="logo">
+                <h1>Carjet Auto</h1>
+            </a>
+            <span class="header__slogan">Найдите авто своей мечты!</span>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" class="active">Каталог</a></li>
+                    <li><a href="#about">О нас</a></li>
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main catalog-page">
+        <section class="catalog-filter">
+            <div class="container">
+                <form id="catalogFilter" class="filter-form">
+                    <div class="filter-row">
+                        <div class="form-group">
+                            <label for="catalogBrand">Марка:</label>
+                            <select id="catalogBrand" name="brand">
+                                <option value="">Все марки</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="catalogModel">Модель:</label>
+                            <select id="catalogModel" name="model" disabled>
+                                <option value="">Сначала выберите марку</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div class="form-group">
+                            <label for="catalogMinPrice">Цена от, $:</label>
+                            <input type="number" id="catalogMinPrice" name="minPrice" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="catalogMaxPrice">Цена до, $:</label>
+                            <input type="number" id="catalogMaxPrice" name="maxPrice" placeholder="100000" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="catalogMinYear">Год от:</label>
+                            <input type="number" id="catalogMinYear" name="minYear" placeholder="2000" min="1990" max="2025">
+                        </div>
+                        <div class="form-group">
+                            <label for="catalogMaxYear">Год до:</label>
+                            <input type="number" id="catalogMaxYear" name="maxYear" placeholder="2025" min="1990" max="2025">
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <button type="submit" class="btn">Применить фильтры</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="catalog">
+            <div class="container">
+                <div class="catalog-header">
+                    <h2>Каталог автомобилей</h2>
+                    <div class="sort-container">
+                        <label for="sortOrder" class="sort-label">Сортировать:</label>
+                        <select id="sortOrder" name="sortOrder">
+                            <option value="">Без сортировки</option>
+                            <option value="price-asc">Цена: по возрастанию</option>
+                            <option value="price-desc">Цена: по убыванию</option>
+                            <option value="year-asc">Год: по возрастанию</option>
+                            <option value="year-desc">Год: по убыванию</option>
+                            <option value="alphabetical">По алфавиту</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="catalog-results" id="catalogResults"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/catalog.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93aa24a9a9fabae9',t:'MTc0NjM4NDIwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

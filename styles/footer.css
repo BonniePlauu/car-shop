@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "RockSalt-Regular";
+    src: url("../fonts/RockSalt-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #1C2526; 
+    color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 30px;
+    min-width: 250px;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.social-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #FFFFFF; 
+}
+
+.social-item {
+    margin: 8px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF; 
+}
+
+.social-icon {
+    width: 20px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.thank-you-text {
+    font-style: italic;
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #FFFFFF; 
+}
+
+.brand-name {
+    font-family: "RockSalt-Regular", sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    color: #FFFFFF; 
+}
+
+.support-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #FFFFFF; 
+}
+
+.support-contact {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #FFFFFF; 
+}
+
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-section {
+        padding: 0;
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        text-align: center;
+    }
+
+    .footer-left .social-item {
+        justify-content: center;
+    }
+}
