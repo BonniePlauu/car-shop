@@ -61,8 +61,7 @@ function initBrandModelFilters(cars, brandSelectId, modelSelectId) {
     const modelSelect = document.getElementById(modelSelectId);
     
     if (!brandSelect || !modelSelect) return;
-    
-    // Заполнение марок
+
     const brands = [...new Set(cars.map(car => car.brand))];
     brands.forEach(brand => {
         const option = document.createElement('option');
@@ -70,8 +69,7 @@ function initBrandModelFilters(cars, brandSelectId, modelSelectId) {
         option.textContent = brand;
         brandSelect.appendChild(option);
     });
-    
-    // Обновление моделей при выборе марки
+
     brandSelect.addEventListener('change', function() {
         modelSelect.innerHTML = '<option value="">Все модели</option>';
         modelSelect.disabled = !this.value;
