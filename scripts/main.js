@@ -1,4 +1,4 @@
-// Загрузка футера
+
 fetch('footer.html')
     .then(response => {
         if (!response.ok) {
@@ -16,7 +16,6 @@ fetch('footer.html')
     })
     .catch(error => console.error('Error loading footer:', error));
 
-// Инициализация бургер-меню
 document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelector('.header__burger');
     const nav = document.querySelector('.header__nav');
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Загрузка и отображение рекомендуемых автомобилей на главной
+ 
     if (document.getElementById('featuredCars')) {
         fetch('cars.xml')
             .then(response => {

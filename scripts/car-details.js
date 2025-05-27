@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
         .then(data => {
-            const cars = parseCarData(data); // Используем parseCarData из utils.js
+            const cars = parseCarData(data); 
             const car = cars.find(car => car.id === carId);
             if (car) {
                 displayCarDetails(car);

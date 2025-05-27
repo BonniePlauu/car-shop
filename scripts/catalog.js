@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let allCars = []; // Храним все автомобили для последующей фильтрации и сортировки
+    let allCars = []; 
 
-    // Загрузка и отображение автомобилей
     fetch('cars.xml')
         .then(response => response.text())
         .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
@@ -36,15 +35,13 @@ function initCatalogFilters(cars) {
     
     if (filterForm) {
         initBrandModelFilters(cars, 'catalogBrand', 'catalogModel');
-        
-        // Применение фильтров
+
         filterForm.addEventListener('submit', function(e) {
             e.preventDefault();
             applyFilters(cars);
         });
     }
 
-    // Обновление результатов при изменении сортировки
     if (sortSelect) {
         sortSelect.addEventListener('change', function() {
             applyFilters(cars);
@@ -90,7 +87,6 @@ function applyInitialFilters(cars) {
         }
     }
 
-    // Применение сортировки, если параметр присутствует
     if (params.has('sort')) {
         document.getElementById('sortOrder').value = params.get('sort');
         filteredCars = sortCars(filteredCars, params.get('sort'));
@@ -152,7 +148,7 @@ function applyFilters(cars) {
         }
     }
     
-    // Применение сортировки
+
     if (sortOrder) {
         filteredCars = sortCars(filteredCars, sortOrder);
     }
@@ -179,6 +175,6 @@ function sortCars(cars, sortOrder) {
                 return nameA.localeCompare(nameB);
             });
         default:
-            return sortedCars; // Без сортировки
+            return sortedCars; 
     }
 }
